@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KONVERSI SUHU</title>
+    <link
+      rel="shortcut icon"
+      href="https://th.bing.com/th/id/OIP.n_d_AoOnqrzuM154pjZ-HgHaHa?pid=ImgDet&rs=1"
+      type="image/x-icon"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <!-- !CSS Lokal -->
+    <link rel="stylesheet" href="css/index.css" />
+    <!-- !End Css Lokal -->
+    <!-- !Css google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- !End Css google font -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"
+    ></script>
+  </head>
+  <body>
+    <!-- ? navbar -->
+    <div id="navbar"></div>
+    <!-- ? end Navbar -->
+    <!-- ? isi-->
+    <div class="container mt-4">
+      <div class="card shadow mb-4">
+        <div class="card-body">
+          <div class="card-title text-center">
+            <h3 class="font_saya"><strong>Konversi Suhu</strong></h3>
+          </div>
+          <div class="card-text text-center">
+            <p class="font_saya">Merubah suhu dengan mudah</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <!-- !form -->
+        <div class="col-md-4">
+          <div class="card shadow">
+            <div class="card-body">
+              <div class="card-text">
+                <div class="mb-3">
+                  <label for="celcius" class="form-label font_saya"
+                    ><strong>Celcius : </strong></label
+                  >
+                  <input
+                    type="number"
+                    class="form-control font_saya text-center"
+                    id="celcius"
+                    placeholder="Celcius"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="remurer" class="form-label font_saya"
+                    ><strong>Remurer : </strong></label
+                  >
+                  <input
+                    type="number"
+                    class="form-control font_saya text-center"
+                    id="remurer"
+                    placeholder="remurer"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="farenhet" class="form-label font_saya"
+                    ><strong>Farenhet : </strong></label
+                  >
+                  <input
+                    type="number"
+                    class="form-control font_saya text-center"
+                    id="farenhet"
+                    placeholder="farenhet"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="kelvin" class="form-label font_saya"
+                    ><strong>Kelvin : </strong></label
+                  >
+                  <input
+                    type="number"
+                    class="form-control font_saya text-center"
+                    id="kelvin"
+                    placeholder="Kelvin"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- !end form -->
+        <!-- !keterangan -->
+        <div class="col-md-8">
+          <div class="card shadow">
+            <div class="card-body">
+              <div class="card-title">
+                <h4 class="font_saya_title text-center">Hasil</h4>
+              </div>
+              <hr />
+              <div class="card-text">
+                <div id="progres"></div>
+                <hr />
+                <div class="alert alert-warning" role="alert">
+                  <h4 class="alert-heading font_saya_title">Perhatian!</h4>
+                  <p class="font_saya">
+                    Dalam menggunakan Kalkulator ini perlu di perhatikan
+                    beberapa hal yang mana pada pengaruh dari isian form untuk
+                    konversi suhu
+                  </p>
+                  <ul class="font_saya">
+                    <li>
+                      Celcius hanya dapat dilihat di progresnya dari \(0^0C\) -
+                      \(100^0C\)
+                    </li>
+                    <li>
+                      Remurer hanya dapat dilihat di progresnya dari \(0^0R\) -
+                      \(80^0R\)
+                    </li>
+                    <li>
+                      Farenhet hanya dapat dilihat di progresnya dari \(32^0F\)
+                      - \(212^0F\)
+                    </li>
+                    <li>
+                      Kelvin hanya dapat dilihat di progresnya dari \(273K\) -
+                      \(373K\)
+                    </li>
+                  </ul>
+                  <p class="font_saya">
+                    jadi apabila lewat diluar range tersebut maka progres tidak
+                    valid lagi dan cuma bisa melihat hasil nya saja
+                  </p>
+                  <hr />
+                  <p class="mb-0 font_saya">
+                    Selamat Mencoba ini nantinya akan dikembangkan ke lebih
+                    canggih nya silahkan jikalau ingin ada masukan untuk
+                    memperbarui aplikasi saya \(Version : 0.0.0\)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- !keterangan -->
+      </div>
+    </div>
+    <!-- ? end isi -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"],
+          ],
+          tags: "ams",
+        },
+      };
+    </script>
+    <script src="js/main.js" type="module"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
